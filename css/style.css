@@ -1,0 +1,372 @@
+@font-face {
+	font-family: "KozGoPr6N-ExtraLight";
+	src: url('../font/KozGoPr6N-ExtraLight.otf') format('truetype');
+}
+@font-face {
+	font-family: "kilsonburg";
+	src: url('../font/kilsonburg.ttf') format('truetype');
+}
+.welcome {
+	background: url(../images/cover.jpg);
+	background-color: #222;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 0;
+}
+/*.home-overlay{
+	background:url(../images/pattern.png);
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;}*/
+.intro {
+	width: 100%;
+	padding: 10px;
+	position: absolute;
+	top: 30%;
+	text-align: center;
+}
+.intro h1 {
+	font-family: "KozGoPr6N-ExtraLight";
+	font-weight: bold;
+	letter-spacing:2px;
+	color: #666;
+}
+.intro a {
+	color: #333;
+	text-decoration: none;
+}
+.fa-scroll-1 {
+	animation: dropdown1 2s linear infinite;
+}
+@keyframes dropdown1 {
+ 0% {
+opacity:1
+}
+ 50% {
+opacity:0
+}
+ 100% {
+opacity:0
+}
+}
+.fa-scroll-2 {
+	animation: dropdown2 2s linear infinite;
+}
+@keyframes dropdown2 {
+ 0% {
+opacity:0
+}
+ 50% {
+opacity:1
+}
+ 100% {
+opacity:0
+}
+}
+.fa-scroll-3 {
+	animation: dropdown3 2s linear infinite;
+}
+@keyframes dropdown3 {
+ 0% {
+opacity:0
+}
+ 50% {
+opacity:0
+}
+ 100% {
+opacity:1
+}
+}
+.scroll-down span {
+	display: block;
+}
+
+
+/*********************/
+/* 导航栏效果 by:yudin */
+/*********************/
+
+.navFix{width:100%;position: fixed;top: 0; z-index: 99999;} 
+
+#navbar {
+	border-radius: 0px;
+	border: none;
+	margin-bottom: 0;
+}
+#navbar .navbar-brand {
+	font-size:32px;
+	font-family:'kilsonburg';
+}
+@-webkit-keyframes xyspin {
+0%, 50% {
+-webkit-transform:skew(10deg, 10deg);
+}
+100% {
+-webkit-transform:skew(0deg, 0deg);
+}
+25%, 75% {
+-webkit-transform:skew(-10deg, -10deg);
+}
+}
+@-moz-keyframes xyspin {
+0%, 50% {
+-moz-transform:skew(10deg, 10deg);
+}
+100% {
+-moz-transform:skew(0deg, 0deg);
+}
+25%, 75% {
+-moz-transform:skew(-10deg, -10deg);
+}
+}
+@-ms-keyframes xyspin {
+0%, 50% {
+-ms-transform:skew(10deg, 10deg);
+}
+100% {
+-ms-transform:skew(0deg, 0deg);
+}
+25%, 75% {
+-ms-transform:skew(-10deg, -10deg);
+}
+}
+@-o-keyframes xyspin {
+0%, 50% {
+-o-transform:skew(10deg, 10deg);
+}
+100% {
+-o-transform:skew(0deg, 0deg);
+}
+25%, 75% {
+-o-transform:skew(-10deg, -10deg);
+}
+}
+@keyframes xyspin {
+0%, 50% {
+transform:skew(10deg, 10deg);
+}
+100% {
+transform:skew(0deg, 0deg);
+}
+25%, 75% {
+transform:skew(-10deg, -10deg);
+}
+}
+#bar_1 {
+	overflow: hidden;
+}
+#bar_1 li a:hover {
+	color: #000;
+	background-color: #fff;
+	-webkit-animation-name: xyspin;
+	-moz-animation-name: xyspin;
+	-ms-animation-name: xyspin;
+	-o-animation-name: xyspin;
+	animation-name: xyspin;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-ms-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+/*********************/
+/* 头像介绍  by:yudin */
+/********************/
+
+.port-5 {
+	float: left;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	text-align: left;
+	border: 4px solid rgba(255, 255, 255, 0.9);
+	overflow: visible;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.port-5 h2 {
+	font-weight: bold;
+}
+.port-5 p {
+	font-size: 16px;
+	font-weight: bold
+}
+.port-5 span {
+	color: #999;
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+	;
+}
+.port-5.effect-1 {
+	z-index: 9;
+}
+.port-5.effect-1 img {
+	transition: 0.5s;
+}
+.port-5.effect-1:hover img {
+	transform: scale(0.5) translateX(-70%);
+	position: relative;
+	z-index: 9;
+	border: 6px solid rgba(255, 255, 255, 0.9);
+}
+.port-5.effect-1 .text-desc {
+	transform: translateX(100%);
+	opacity: 0;
+	padding: 75px 20px 20px 80px;
+	transition: 0.5s;
+	position: absolute;
+	top: 0;
+}
+.port-5.effect-1:hover .text-desc {
+	transform: translateX(30%);
+	opacity: 1;
+}
+.col-sm-2 {
+	margin-top: 50px;
+}
+.iconbox {
+	background: #fff;
+	/*border-bottom: 1px solid #d4d4d4;*/
+	text-align: center;
+	padding: 40px 20px;
+	margin: 0 0 20px;
+}
+.iconbox-icon {
+	margin: 0 0 15px;
+	font-size: 32px;
+	color: #222;
+}
+.iconbox-title {
+	margin: 0 0 15px;
+	padding: 0;
+}
+.dddd {
+	width: 200px;
+	height: 200px;
+	background-color: black;
+}
+@keyframes swing {
+ 20% {
+ -webkit-transform: rotate3d(0, 0, 1, 15deg);
+ transform: rotate3d(0, 0, 1, 15deg);
+}
+ 40% {
+ -webkit-transform: rotate3d(0, 0, 1, -10deg);
+ transform: rotate3d(0, 0, 1, -10deg);
+}
+ 60% {
+ -webkit-transform: rotate3d(0, 0, 1, 5deg);
+ transform: rotate3d(0, 0, 1, 5deg);
+}
+ 80% {
+ -webkit-transform: rotate3d(0, 0, 1, -5deg);
+ transform: rotate3d(0, 0, 1, -5deg);
+}
+ to {
+ -webkit-transform: rotate3d(0, 0, 1, 0deg);
+ transform: rotate3d(0, 0, 1, 0deg);
+}
+}
+.iconbox:hover {
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	-webkit-animation-name: swing;
+	animation-name: swing;
+	animation-duration: 2s;
+}
+
+
+/*********************/
+/* showlib  by:yudin */
+/********************/
+
+.works {
+	background-color: #f5f5f5;
+}
+.pfblock-header{
+	padding:30px 0;
+	text-align:center;}
+.port-2 {
+	float: left;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	border: 4px solid rgba(255, 255, 255, 1);
+	background-color:#fff;
+	perspective: 800px;
+	margin-top: 20px;
+}
+.port-2 .text-desc {
+	z-index: -1;
+	transition: 0.6s;
+	top: 0;
+	position: absolute;
+	padding:0 10px;
+}
+.port-2 .image-box {
+	transition: 0.4s;
+}
+.port-2:hover .image-box {
+	transform: rotateX(80deg);
+	transform-origin: center bottom 0;
+	transition: 0.4s;
+}
+.port-2.effect-2 .text-desc {
+	opacity: 1;
+	top: -100%;
+}
+.port-2.effect-2:hover .text-desc {
+	position: absolute;
+	top: 0;
+}
+
+
+/*********************/
+/* footer  by:yudin */
+/********************/
+
+footer{
+	background-color:#2a2a2a;
+	color:#777;}
+footer h3{
+	margin-bottom:20px;}
+#contact_me,#loc,#links,#myadr{
+	margin:20px 0;}	
+#contact_me span{
+	margin:10px 0;
+	width:40px;
+	display:inline-block;}
+#links ul,#myadr ul{
+	font-size:16px;
+	line-height:25px;}
+#links a,#myadr a{
+	color:#777;
+	text-decoration:none;}
+#links a:hover,#myadr a:hover{
+	color:#ddd;
+	text-decoration:none;}
+#img1{
+	padding:20px 0;}
+#footer_bottom{
+	background-color:#222222;}
+#footer_bottom .breadcrumb{
+	background-color:#222222;
+	font-size:18px;
+	margin-top:10px;}
+#footer_bottom .breadcrumb a{
+	color:#777;}

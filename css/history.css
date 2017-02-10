@@ -1,0 +1,246 @@
+﻿@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+a, img {
+	border: 0;
+}
+body {
+	_background-image: url(about:blank);/*用浏览器空白页面作为背景*/
+	_background-attachment: fixed; /* prevent screen flash in IE6 确保滚动条滚动时，元素不闪动*/
+}
+.clear {
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+/* history */
+#history {
+	position: relative;
+	margin: 50px auto 50px auto;
+}
+.title {
+	height: 95px;
+	line-height: 95px;
+	text-indent: 60px;
+	margin-bottom:50px;
+}
+.title h2 {
+	color: #000;
+	font-weight: 500;
+}
+#circle {
+	width: 83px;
+	height: 83px;
+	position: absolute;
+	top: 64px;
+	left: 113px;
+	border: 6px solid rgba(0,0,0,0.15);
+	border-radius: 95px;
+	text-indent: 0;
+	text-align: center;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+#circle:hover {
+	transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	border-color: rgba(0,0,0,0);
+}
+.clock {
+	display: block;
+}
+#circle:hover {
+	border-color: rgba(255,255,255,0.6);
+	background-color: #b37c07;
+}
+#circle:hover .clock {
+	display: block;
+}
+#circle:hover .circlecontent {
+	display: none;
+}
+#circle span {
+	position:absolute;
+	top:-10px;
+	left:10px;
+	font-size: 24px;
+	font-weight:bold;
+	color: #b37c07;
+}
+#circle .clock {
+	background: url(../images/clock.png) no-repeat 0 0;
+	width: 83px;
+	height: 83px;
+	position: absolute;
+	top: -5px;
+	left:-5px;
+	display: none;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	border-radius: 0;
+}
+#circle:hover .clock {
+	border-radius: 83px;
+}
+.timeyear {
+	color: #b0b0b0;
+	font-size: 18px;
+	line-height: 20px;
+}
+.timeblock {
+	height: 28px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.timeblock span {
+	display: block;
+	height: 24px;
+	width: 32px;
+}
+#content {
+	height: 355px;
+	width: 1180px;
+	overflow: hidden;
+	background: url(../images/vertical.png) no-repeat 150px 2px;
+	padding-top: 10px;
+}
+.list {
+	overflow: hidden;
+	position: relative;
+}
+.list li {
+	height: 110px;
+	vertical-align: bottom;
+	overflow: hidden;
+	position: relative;
+}
+.liwrap {
+	height: 55px;
+	margin-top: 28px;
+}
+.lileft {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	height: 55px;
+	width: 200px;
+	line-height: 55px;
+	margin-left: 20px;
+}
+.liright {
+	position: absolute;
+	top: 0;
+	right:0px;
+	height: 55px;
+	width: 900px;
+}
+.histt {
+	height: 35px;
+	line-height: 35px;
+}
+.hisct {
+	font-size: 14px;
+	color: #6e6e6e;
+}
+.md {
+	font-size: 18px;
+	color: #AEAEAE;
+}
+.year {
+	font-size: 12px;
+	color: #AEAEAE;
+	margin-right: 10px;
+}
+.point {
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	top: 0px;
+	left: 127px;
+	background: url(../images/point.png) no-repeat 0px 18px;
+	overflow: hidden;
+}
+.point b {
+	height: 16px;
+	width: 16px;
+	background: #fff;
+	display: block;
+	margin: 19px 0 0 19px;
+	border-radius: 18px;
+	border: 2px solid #b37c07;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.thiscur .point b {
+	border: 7px solid #b37c07;
+	margin: 16px 0px 0px 16px;
+	border-radius: 52px;
+	width: 22px;
+	height: 22px;
+}
+.thiscur .histt a {
+	color: #d77900;
+	text-decoration:none;
+}
+.histt a {
+	font-size: 24px;
+	color: #747474;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+#arrow {
+	position: fixed;
+	top: 50%;
+	right: 30px;
+}
+*html #arrow {
+	position: absolute;
+top:expression(eval(document.documentElement.scrollTop));
+	margin-top: 350px;
+}
+#arrow ul li {
+	display: none;
+	height: 20px;
+	width: 20px;
+	background: url(../images/icons.png) no-repeat 0 0;
+	cursor: pointer;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+#arrow ul li:active {
+	background-color: #946109;
+}
+#arrow ul .arrow_active {
+	background-color: #946109;
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+}
+#arrow ul .arrowup {
+	background-position: 0px -26px;
+	margin-bottom: 10px;
+}
+#arrow ul .arrowdown {
+	background-position: 0px 0px;
+}
